@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade AC1</title>
+</head>
+<body>
+    <h2>Produtos em Estoque</h2>
+    <table>
+        <tr th:each="produto: ${produtos}">
+            <th th:text="${produto.codigo}">
+                <td th:text="${produto.nome}">
+                <td th:text="${produto.valor}">
+                <td th:text="${produto.estoque}">
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Produto</h1>
+    <h3>
+        Código:
+    </h3>
+    <p th:text="${produto?.codigo}"></p>
+    <h3>
+        Nome:
+    </h3>
+    <p th:text="${produto?.nome}"></p>
+    <h3>
+        Valor:
+    </h3>
+    <p th:text="${produto?.valor}"></p>
+    <h3>
+        Quantidade em Estoque:
+    </h3>
+    <p th:text="${produto?.estoque}"></p>
+</body>
+</html>
