@@ -28,10 +28,17 @@ public class ProdutoController {
      @PathVariable("codigo") int codigo) 
     {
         ModelAndView mv1 = new ModelAndView("produto");
+        ModelAndView mvErro = new ModelAndView("erro");
         Produto p1 = ps.getProduto(codigo);
 
-        mv1.addObject("produto", p1);
-        return mv1;
+        if(p1 != null)
+        {
+           mv1.addObject("produto", p1);
+        return mv1; 
+        }
+        else
+        return mvErro;
+        
     }
     
     @GetMapping("/produtosEmEstoque")
