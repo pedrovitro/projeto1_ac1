@@ -22,6 +22,14 @@ public class ProdutoController {
     @Autowired
     private ProdutoService ps;
 
+    @GetMapping("")
+
+    public ModelAndView getMenu ()
+    {
+        ModelAndView mvMenu = new ModelAndView("menu");
+        return mvMenu;
+    }
+
     @GetMapping("/produto/{codigo}")
 
     public ModelAndView getProduto(
